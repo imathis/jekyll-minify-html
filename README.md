@@ -45,6 +45,31 @@ For example, this will disable minification, regardless of your `env` setting.
 minify_html: false
 ```
 
+### Example Configuration
+
+1. In `_config.yml`, insert:
+
+   ```yaml
+   minify_html: false
+   ```
+
+2. In a new config file, `_config_production.yml`, insert:
+
+   ```yaml
+   minify_html: true
+   ```
+3. In development, build Jekyll normally:
+
+   ```shell
+   jekyll build   # or jekyll serve
+   ```
+   For a production build, run:
+
+   ```shell
+   jekyll build --config _config.yml,_config_production.yml
+   ```
+
+
 ## HtmlPress Configuration:
 
 You can set configuration options for [HtmlPress](https://github.com/stereobooster/html_press) in your Jekyll configuration like this:
